@@ -1,0 +1,14 @@
+D:\TLHT\C#\BT\LinQ_Employee\LinQ_Employee\bin\Debug\LinQ_Employee.exe.config
+D:\TLHT\C#\BT\LinQ_Employee\LinQ_Employee\bin\Debug\LinQ_Employee.exe
+D:\TLHT\C#\BT\LinQ_Employee\LinQ_Employee\bin\Debug\LinQ_Employee.pdb
+D:\TLHT\C#\BT\LinQ_Employee\LinQ_Employee\obj\Debug\LinQ_Employee.csproj.AssemblyReference.cache
+D:\TLHT\C#\BT\LinQ_Employee\LinQ_Employee\obj\Debug\LinQ_Employee.csproj.CoreCompileInputs.cache
+D:\TLHT\C#\BT\LinQ_Employee\LinQ_Employee\obj\Debug\LinQ_Employee.exe
+D:\TLHT\C#\BT\LinQ_Employee\LinQ_Employee\obj\Debug\LinQ_Employee.pdb
+D:\GitHub\C#\BT_LinQ_Join\LinQ_Employee\LinQ_Employee\bin\Debug\LinQ_Employee.exe.config
+D:\GitHub\C#\BT_LinQ_Join\LinQ_Employee\LinQ_Employee\bin\Debug\LinQ_Employee.exe
+D:\GitHub\C#\BT_LinQ_Join\LinQ_Employee\LinQ_Employee\bin\Debug\LinQ_Employee.pdb
+D:\GitHub\C#\BT_LinQ_Join\LinQ_Employee\LinQ_Employee\obj\Debug\LinQ_Employee.csproj.AssemblyReference.cache
+D:\GitHub\C#\BT_LinQ_Join\LinQ_Employee\LinQ_Employee\obj\Debug\LinQ_Employee.csproj.CoreCompileInputs.cache
+D:\GitHub\C#\BT_LinQ_Join\LinQ_Employee\LinQ_Employee\obj\Debug\LinQ_Employee.exe
+D:\GitHub\C#\BT_LinQ_Join\LinQ_Employee\LinQ_Employee\obj\Debug\LinQ_Employee.pdb
