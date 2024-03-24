@@ -12,6 +12,7 @@ namespace LinQ_Employee
         {
 
             var employee = Employee.getEmployees();
+            var department = Department.getDepartments();
 
             var maxSalary = employee.Max(x => x.Salary);
             Console.WriteLine("Max Salary: " + maxSalary);
@@ -24,8 +25,7 @@ namespace LinQ_Employee
             Console.WriteLine();
 
             Console.WriteLine("GroupBy DepartmentID:");
-            var employeeGroup = from e in Employee.getEmployees()
-                                group e by e.DepartmentID;
+            var employeeGroup = employee.GroupBy(e => e.DepartmentID);
             foreach (var group in employeeGroup)
             {
                 Console.WriteLine("DepartmentID: {0}- #{1}", group.Key, group.Count());
@@ -37,18 +37,18 @@ namespace LinQ_Employee
             Console.WriteLine();
 
             Console.WriteLine("GroupJoin Department:");
-            var employeesByDepartment = Department.getDepartments().GroupJoin(Employee.getEmployees(),
+            var employeesByDepartment = Department.getDepartments().GroupJoin(employee,
                                         d => d.ID,
                                         e => e.DepartmentID,
-                                        (department, employees) => new
+                                        (departments, employees) => new
                                         {
-                                            Department = department,
+                                            Department = departments,
                                             Employee = employees
                                         });
-            foreach (var department in employeesByDepartment)
+            foreach (var departments in employeesByDepartment)
             {
-                Console.WriteLine(department.Department.Name);
-                foreach (var em in department.Employee)
+                Console.WriteLine(departments.Department.Name);
+                foreach (var em in departments.Employee)
                 {
                     Console.WriteLine("" + em.Name);
                 }
@@ -56,8 +56,8 @@ namespace LinQ_Employee
             Console.WriteLine();
 
             Console.WriteLine("Left Outer Join: ");
-            var resultLeft = from e in Employee.getEmployees()
-                             join d in Department.getDepartments()
+            var resultLeft = from e in employee
+                             join d in department
                              on e.DepartmentID equals d.ID into eGroup
                              from d in eGroup.DefaultIfEmpty()
                              select new
@@ -72,8 +72,8 @@ namespace LinQ_Employee
             Console.WriteLine();
 
             Console.WriteLine("Right Outer Join: ");
-            var resultRight = from d in Department.getDepartments()
-                              join e in Employee.getEmployees()
+            var resultRight = from d in department
+                              join e in employee
                               on d.ID equals e.DepartmentID into dGroup
                               from e in dGroup.DefaultIfEmpty()
                               select new
@@ -89,7 +89,7 @@ namespace LinQ_Employee
 
             var maxAge = employee.Max(x => x.Age);
             Console.WriteLine("Max Age: " + maxAge);
-;
+
             var minAge = employee.Min(x => x.Age);
             Console.WriteLine("Min Age: " + minAge);
 
